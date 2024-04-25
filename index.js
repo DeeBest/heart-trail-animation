@@ -3,6 +3,7 @@ const currentDate = new Date().getFullYear();
 footerParagraph.textContent = `Created by \xA9Simphiwe ${currentDate}.`;
 
 const bodyElement = document.querySelector('body');
+const container = document.getElementById('container');
 
 bodyElement.addEventListener('mousemove', (e) => {
   const xPosition = e.offsetX;
@@ -16,9 +17,10 @@ bodyElement.addEventListener('mousemove', (e) => {
   spanElement.style.width = randomHeartSize + 'px';
   spanElement.style.height = randomHeartSize + 'px';
 
+  container.appendChild(spanElement);
   bodyElement.appendChild(spanElement);
 
   setTimeout(() => {
-    spanElement.remove;
-  }, 4000);
+    spanElement.remove();
+  }, 1000);
 });

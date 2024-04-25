@@ -44,7 +44,7 @@ span {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  animation: heartAnimation 8s linear;
+  animation: heartAnimation 6s linear;
 }
 
 @keyframes heartAnimation {
