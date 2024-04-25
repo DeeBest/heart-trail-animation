@@ -32,3 +32,14 @@ footer {
   font-size: 1.3rem;
   font-weight: 600;
 }
+
+main span {
+  background: url(heart.webp);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
