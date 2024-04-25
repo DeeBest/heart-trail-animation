@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: black;
+  overflow: hidden;
 }
 header,
 body,
@@ -33,13 +34,28 @@ footer {
   font-weight: 600;
 }
 
-main span {
+span {
   background: url(heart.webp);
   width: 100px;
   height: 100px;
+  pointer-events: none;
   position: absolute;
   background-size: cover;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  animation: heartAnimation 8s linear;
+}
+
+@keyframes heartAnimation {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -10050%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
 }
